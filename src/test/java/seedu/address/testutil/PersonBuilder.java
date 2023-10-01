@@ -92,9 +92,12 @@ public class PersonBuilder {
     }
 
     public Person build() {
-        return new Person(name, phone, email, address, tags,remark);
+        return new Person(name, phone, email, address, tags, remark);
     }
 
+    /**
+     * Initializes the PersonBuilder with the data of {@code personToCopy}
+     */
     public PersonBuilder withRemark(String remark) {
         this.remark = new Remark(remark);
         return this;
